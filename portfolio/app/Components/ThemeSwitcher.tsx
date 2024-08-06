@@ -17,15 +17,17 @@ export function ThemeSwitcher() {
 const switchChange = () => {
   if(!mounted){
       setTheme("dark");
+      console.log(theme)
   }else{
       setTheme("light");
+      console.log(theme)
   }
     setMounted(!mounted)
 }
 
   return (
-    <div className="absolute z-40">
-      <Switch isSelected={mounted} onValueChange={switchChange} />
+    <div className="z-40">
+      <Switch isSelected={mounted} onValueChange={switchChange}>Dark Mode</Switch>
     </div>
   )
 };

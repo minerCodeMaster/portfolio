@@ -33,18 +33,18 @@ export default function Grid() {
 
     return (
         <>
-            <div className="absolute inset-0 bg-none z-10">
+            <div className="absolute inset-0 bg-none z-10 top-14">
             <svg aria-hidden="true" className="absolute inset-0 h-full w-full z-0 -top-1">
             <defs>
                 <pattern id="gridPattern" width={squareSize} height={squareSize} patternUnits="userSpaceOnUse">
-                <path d="M0 96V0.5H96" fill="none" className=" stroke-default-300" strokeDasharray={2}></path>
+                <path d="M0 96V0.5H96" fill="none" className=" stroke-foreground/50" strokeDasharray={2}></path>
                 </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#gridPattern)"></rect>
             </svg>
         </div>
         <div className="absolute inset-0 z-20 shadow-[inset_0px_-608px_150px_0px] shadow-s-primary"></div>
-        <div className=" h-10 w-64 bg-gradient-to-tr from-b-primary to-b-secondary absolute top-24 rotate-12 blur-3xl right-10"></div>
+        <div className=" h-10 lg:h-[40rem] w-64 lg:w-[40rem] bg-gradient-to-tr from-b-primary lg:from-b-primary/25 to-b-secondary lg:to-b-secondary/25 absolute top-32 right-4 rotate-12 lg:rotate-45 blur-3xl lg:right-32 lg:top-32 "></div>
       </>
     )
 }
